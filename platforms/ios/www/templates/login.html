@@ -1,0 +1,36 @@
+<ion-view view-title="BIENVENUE" class="grey_bg">
+  	<ion-content padding="10">
+     <form ng-controller="LoginCtrl" accept-charset="UTF-8" ng-submit="doLogin()">
+      <div class="list">
+			<p class="form_logo">
+         	<img title="" alt="" src="https://www.planeteprofs.com/wp-content/uploads/2016/03/photo_logo_appli.png" class="">
+         </p>
+         
+         <div >
+         
+        	<label class="item item-input">
+          	<input type="text" placeholder="login" name="login" ng-model="userlogin" >
+        	</label>
+        	<label class="item item-input">
+          	<input type="password" placeholder="Mot de passe" name="password" ng-model="userpassword">
+        	</label>
+
+          </div>
+
+         <a ng-href="#/app/forgot" class="button button-clear button-block button-assertive">
+           	Vous avez oublié votre mot de passe?
+         </a>
+          
+        	<input type="button" ng-click="doLogin();" class="button button-block button-assertive" value="CONNEXION">
+           	
+         </input>
+         <button class="button button-clear button-block">
+           	Vous n'avez pas encore de compte?
+         </button>
+         <a ng-href="#/app/signup" class="button button-clear button-block button-assertive">
+           	Créer un compte
+         </a>
+      </div>
+      </form>
+  </ion-content>
+</ion-view>

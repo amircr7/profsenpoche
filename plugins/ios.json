@@ -1,0 +1,30 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.phonegap.ProfChat"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.phonegap.ProfChat"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.phonegap.ProfChat"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.phonegap.ProfChat"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.ProfChat"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "com.phonegap.ProfChat"
+        }
+    },
+    "dependent_plugins": {}
+}

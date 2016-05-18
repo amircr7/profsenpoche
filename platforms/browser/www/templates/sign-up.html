@@ -1,0 +1,56 @@
+<ion-view view-title="S'inscrire" class="grey_bg">
+  	<ion-content padding="10">
+    <form ng-controller="SignUpCtrl" accept-charset="UTF-8" >
+      <div class="list">
+			<p class="form_logo">
+         	<img title="" alt="" src="https://www.planeteprofs.com/wp-content/uploads/2016/03/photo_logo_appli.png" class="">
+         </p>
+         <label class="item item-input">
+          	<input type="text" placeholder="Nom" name="nom" ng-model="nom" >
+        	</label>
+         <label class="item item-input">
+          	<input type="text" placeholder="Prénom" name="prenom" ng-model="prenom">
+        	</label>
+        	<label class="item item-input">
+          	<input type="email" placeholder="Email" name="email" ng-model="email" required >
+        	</label>
+          <label class="item item-input">
+            <input type="text" placeholder="Login" name="login" ng-model="login" required >
+          </label>
+        	<label class="item item-input">
+          	<input type="password" placeholder="Mot de passe" name="motdepasse" ng-model="motdepasse" required >
+        	</label>
+          <label class="item item-input">
+            <input type="text" placeholder="Numero de telephone" name="numtel" ng-model="numtel" required >
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="classe" name="classe" ng-model="classe" required >
+          </label>
+          <br>
+          <br>
+           <button class="button button-clear button-block">
+            Veuillez choisir votre session :
+         </button>
+          <!--
+          <center>
+          <input type="radio" name="profs" value="Professeur" >Professeur
+          <input type="radio" name="Eleve" value="Eleve">
+          Eléve
+          </center>
+           -->
+        	<!--<button ng-submit="doRegister()" class="button button-block button-assertive">
+           	
+         </button>-->
+         <input type="button" ng-click="doRegister();" ng-controller="SignUpCtrl" class="button button-block button-assertive" value="S'inscrire" >
+            
+         </input>
+         <button class="button button-clear button-block">
+           	Vous avez déjà un compte?
+         </button>
+         <a ng-href="#/app/login" class="button button-clear button-block button-assertive">
+           	Connexion
+         </a>
+      </div>
+      </form>
+  </ion-content>
+</ion-view>

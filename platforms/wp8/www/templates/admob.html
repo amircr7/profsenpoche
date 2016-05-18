@@ -1,0 +1,44 @@
+<ion-view view-title="Contactez-nous" class="grey_bg">
+  	<ion-content padding="10">
+      <div class="list">
+      <form method="post" ng-submit="submitForm()(postForm.$valid)" name="postForm" ng-controller="ContactCtrl" novalidate>
+        		<label class="item item-input">
+            	<input required ng-model="user.name" name="name" type="text" placeholder="Nom">
+            	<span ng-message class="warning-message-normal" ng-show="postForm.name.$invalid && postForm.name.$dirty">Required</span>
+        		</label>
+        		<br>
+        		<label class="item item-input">
+          		<input required type="email" ng-model="user.email" name="email" placeholder="Email" value="">
+        		</label>
+            
+        		<span ng-message class="item item-input warning-message-normal" ng-show="postForm.email.$error.required && postForm.email.$dirty">Required</span>
+        		<span ng-message class="item item-input warning-message-normal" ng-show="postForm.email.$error.email && postForm.email.$dirty">Cet email est invalide.</span>
+        		<br>
+        		<label class="item item-input">
+            	<textarea required ng-model="user.details" name="details" placeholder="Message à envoyer à Planeteprofs"></textarea>
+            	<span ng-message class="warning-message-normal" ng-show="postForm.details.$invalid && postForm.details.$dirty">Required</span>
+        		</label>
+        		<br>
+        		
+           	    <h1 class="button button-clear button-block">Numero : 09 67 50 71 00 </h1>
+                
+               
+                  <h1 class="button button-clear button-block" width="500px">Email : contact@planeteprofs.com</h1>    
+                
+                <div id="contact-img">
+					<center><img src="https://www.planeteprofs.com/wp-content/themes/Planeteprofs/images/planete-profs-nous-contacter.png" alt="PlaneteProfs - Nous contacter" width="320" ></center>
+				</div>
+                
+        		<button ng-click="submitForm()" class="button button-block button-assertive"  ng-controller="ContactCtrl"/>Envoyer</button>
+          		
+            <div class="list">
+          <a href="https://www.planeteprofs.com" class="button button-block button-assertive">
+            Aller sur PlaneteProfs.com                     
+         </a>
+
+      </div>
+        	</form>
+        
+      </div>
+  </ion-content>
+</ion-view>

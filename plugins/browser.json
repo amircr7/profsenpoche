@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.phonegap.ProfChat"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.phonegap.ProfChat"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "com.phonegap.ProfChat"
+        }
+    },
+    "dependent_plugins": {}
+}
