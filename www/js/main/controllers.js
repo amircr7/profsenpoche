@@ -572,6 +572,7 @@ app.controller('MessageCtrl', ['$scope', 'Messages', '$ionicScrollDelegate','$ht
 		{
 			$scope.items = [];
 		});
+
 	}
      //il faut recevoir true from phpServer pour un newmessage pour executer le Setinterval
      //donc il faut appeler une fonction get qui s'execute chaque seconde pour demander silya un true qui vient
@@ -618,6 +619,19 @@ app.controller('MessageCtrl', ['$scope', 'Messages', '$ionicScrollDelegate','$ht
 		$scope.getPosts();
 		$scope.$broadcast('scroll.refreshComplete');
 	}
+	$scope.autoExpand = function(e) {
+		var element = typeof e === 'object' ? e.target : document.getElementById(e);
+		var scrollHeight = element.scrollHeight -60; // replace 60 by the sum of padding-top and padding-bottom
+		element.style.height =  scrollHeight + "px";
+	};
+
+	function expand() {
+		$scope.autoExpand('TextArea');
+	}
+	/*$scope.updateEditor = function() {
+		var element = document.getElementById("page_content");
+		element.style.height = element.scrollHeight + "px";
+	};*/
 
 	$scope.addMesage = function(){
 		$http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
@@ -647,7 +661,7 @@ app.controller('MessageCtrl', ['$scope', 'Messages', '$ionicScrollDelegate','$ht
 
 		}
              /* var data=JSON.parse(datatable);*/
-		$scope.messages = $scope.messages.concat(data.datamessage);
+		$scope.messages = $scope.messages.concat(newMessage);
 		$scope.datamessage = "";
 		$ionicScrollDelegate.scrollBottom();
         
