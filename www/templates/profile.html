@@ -1,57 +1,57 @@
 <ion-view view-title="Moi">
-   <ion-content has-header="true" ng-controller="ProfileCtrl" ng-repeat="userprofile in users">
-      <div id="content" >
-        <div id="profile-info">
-          <img id="profile-image" src="http://3.bp.blogspot.com/-zR75pEKCSSU/VYGjwNogrmI/AAAAAAAAA1Y/xgPrSXra3fE/s200-c/darts-102919_1280.jpg">
-          <h3 id="profile-name">{{userprofile.currentuser}}</h3>
+    <ion-content has-header="true" ng-controller="ProfileCtrl" ng-repeat="userprofile in users">
+        <div id="content" >
+            <div id="profile-info">
+                <img id="profile-image" src="http://3.bp.blogspot.com/-zR75pEKCSSU/VYGjwNogrmI/AAAAAAAAA1Y/xgPrSXra3fE/s200-c/darts-102919_1280.jpg">
+                <h3 id="profile-name">{{userprofile.currentuser}}</h3>
           <span id="profile-description">
-          	Suivez nous 
+          	Suivez nous
              <a href="http://twitter.com/weblogtemplates">
-             	<i class="icon ion-social-twitter"></i>
+                 <i class="icon ion-social-twitter"></i>
              </a>
 			</span>
+            </div>
         </div>
-      </div>
-      <div class="list">
-      	
-        <a class="item item-icon-left" ng-click="allerplaneteprofscontact()">
-          <i class="icon ion-email"></i>
-          Contactez PlaneteProfs
-        </a>
-        
-        <!--<a class="item item-icon-left item-icon-right" href="#">
-          <i class="icon ion-chatbubble-working"></i>
-          Call Ma
-          <i class="icon ion-ios-telephone-outline"></i>
-        </a>-->
-        <div class="list" ng-controller="ProfileCtrl">
-          
-        <a class="item item-icon-left" href="#">
-          <i class="icon ion-mic-a"></i>
-          Enregistrer
-        </a>
-        <a href="#" class="item" >
-        Vos cordonnées personnelles :
-        </a>
-        <div>
-        <a class="item" >
+        <div class="list">
 
-          <i>Numéro tel</i> : {{ userprofile.Numtel}}
-        </a>
-       <a class="item">
+            <a class="item item-icon-left" ng-click="allerplaneteprofscontact()">
+                <i class="icon ion-email"></i>
+                Contactez PlaneteProfs
+            </a>
 
-          <i>Email   </i>    : {{ userprofile.Email}}
-        </a>
-         <a class="item">
+            <!--<a class="item item-icon-left item-icon-right" href="#">
+              <i class="icon ion-chatbubble-working"></i>
+              Call Ma
+              <i class="icon ion-ios-telephone-outline"></i>
+            </a>-->
 
-         <i> Loisirs   </i>  : {{ userprofile.hobbies}}
-        </a>
-         <a class="item">
 
-          <i> Classe    </i>  : {{ userprofile.class}}
-        </a>
-        </div>
-      </div>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-mic-a"></i>
+                    Enregistrer
+                </a>
+                <a href="#" class="item" >
+                    Vos cordonnées personnelles :
+                </a>
+                <div>
+                    <a class="item" >
+
+                        <i>Numéro tel</i> : {{ userprofile.Numtel}}
+                    </a>
+                    <a class="item">
+
+                        <i>Email   </i>    : {{ userprofile.Email}}
+                    </a>
+                    <a class="item">
+
+                        <i> Loisirs   </i>  : {{ userprofile.hobbies}}
+                    </a>
+                    <a class="item">
+
+                        <i> Classe    </i>  : {{ userprofile.class}}
+                    </a>
+                </div>
+            </div>
     </ion-content>
-   
+
 </ion-view>
