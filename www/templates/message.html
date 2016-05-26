@@ -17,7 +17,7 @@
                                 <div class="message-detail">
                                     <span class="bold">{{message.title}}</span>
                                     <span>{{message.message_date}}</span>
-                                   <!-- <span>affichage{{message.title}} / {{currentusername}}</span>-->
+
                                 </div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                                 <div class="message-detail">
                                     <span class="bold">{{message.title}}</span>
                                     <span>{{message.message_date}}</span>
-                                   <!-- <span>affichage{{message.title}} / {{currentusername}}</span>-->
+
                                 </div>
                             <div class="message-detail">
                                 <span class="bold">{{message.title}}</span>
@@ -70,7 +70,7 @@
     </ion-content>
     <div class="bar bar-footer bar-stable comment-stable-main keyboard-attach">
         <!-- il faut vérifier addMessage si c'est bien ng-submit ou non en treme de vitesse d'appel de fonction  -->
-        <form  class="comment-form-main" method="post" ng-submit="addMesage()" name="postForm" novalidate>
+        <form  class="comment-form-main" method="post" ng-submit="addMesage(postForm.$valid)" name="postForm" novalidate>
             <div class="row small-font row-comment">
 
                 <span class="col-75">
