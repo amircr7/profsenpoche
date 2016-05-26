@@ -17,25 +17,7 @@ app.run(function($ionicPlatform) {
 			// remove the status bar on iOS or change it to use white instead of dark colors.
 			StatusBar.styleDefault();
 		}
-
-		// Enable to debug issues.
-		window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-
-		var notificationOpenedCallback = function(jsonData) {
-			console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-		};
-
-		window.plugins.OneSignal.init("47930da2-dba2-43c3-b86f-c494da6df6d4",
-			{googleProjectNumber: "159380755348"},
-			notificationOpenedCallback);
-
-		//subscribe to the service
-		window.plugins.OneSignal.setSubscription(true);
-		//activating the reception of push notification when the app is working also
-		window.plugins.OneSignal.enableNotificationsWhenActive(false);
 	});
-
-
 });
 //app run getting device id
 app.run(function ($rootScope, myPushNotification) {
@@ -166,6 +148,7 @@ app.controller('LoginCtrl', ['$state','$scope','$http',  function($state, $scope
 					console.log('Logged succesfully!');
 
 					$state.go('app.message');
+
 				})
 				.error(function(data,headers,config)
 				{
