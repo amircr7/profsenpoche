@@ -80,9 +80,9 @@ app.controller('MainCtrl', ['$scope', '$ionicSideMenuDelegate', '$ionicHistory',
 		.success(function(userconnect,headers,config)
 		{
 
-			
+
 			$scope.testuserconnect=userconnect;
-		
+
 
 
 		})
@@ -582,7 +582,7 @@ app.controller('MessageCtrl', ['$scope', 'Messages', '$ionicScrollDelegate','$ht
 	}, function errorCallback(response) {
 		console.log('erreur !');
 	});*/
-	
+
 	$http.get('http://94.23.13.72/planeteprofs/wp-admin/admin-ajax.php?action=app_post_profile')
 		.success(function(data,headers,config)
 		{
@@ -593,7 +593,7 @@ app.controller('MessageCtrl', ['$scope', 'Messages', '$ionicScrollDelegate','$ht
 				{ currentuserID: data.currentuserID,},
 
 			];
-			
+
 			/*alert('currentuserid : '+$scope.users);*/
 
 
@@ -622,7 +622,7 @@ app.controller('MessageCtrl', ['$scope', 'Messages', '$ionicScrollDelegate','$ht
 			});
 	}
 	$scope.newgetPosts=function(){
-        
+        //faut voir pourquoi ca marche pas
 	};
 	//il faut recevoir true from phpServer pour un newmessage pour executer le Setinterval
 	//donc il faut appeler une fonction get qui s'execute chaque seconde pour demander silya un true qui vient
@@ -637,7 +637,7 @@ app.controller('MessageCtrl', ['$scope', 'Messages', '$ionicScrollDelegate','$ht
 				if($scope.checkmsg.trim()=='true')
 				{
 					console.log('Nouveau message recu');
-					$scope.newgetPosts();
+					$scope.getPosts();
 				} else {
 					console.log('pas de message');
 				}
