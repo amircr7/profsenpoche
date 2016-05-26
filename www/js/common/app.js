@@ -5,7 +5,7 @@ app.constant("Config", {
   "FriendsUrl": "data/friends.json",
   "MessagesUrl": "data/messages.json",
   "ProfileUrl": "ttp://94.23.13.72/planeteprofs/wp-admin/admin-ajax.php?action=app_post_profile",
-  "MessageUrl": "http://94.23.13.72/planeteprofs/wp-admin/admin-ajax.php?action=app_list_new_message",
+  "MessageUrl": "http://94.23.13.72/planeteprofs/wp-admin/admin-ajax.php?action=app_list_messages",
   "ProductUrl": "data/products.json",
   "WordPress": "https://www.planeteprofs.com/",
 })
