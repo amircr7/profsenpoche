@@ -7,10 +7,10 @@
         "files": {}
     },
     "installed_plugins": {
-        "com.phonegap.plugins.PushPlugin": {
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.phonegap.ProfChat"
         },
-        "cordova-plugin-camera": {
+        "cordova-plugin-email-composer": {
             "PACKAGE_NAME": "com.phonegap.ProfChat"
         },
         "cordova-plugin-network-information": {
@@ -22,9 +22,6 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.ProfChat"
         },
-        "cordova-plugin-email-composer": {
-            "PACKAGE_NAME": "com.phonegap.ProfChat"
-        }
     },
     "dependent_plugins": {}
 }
